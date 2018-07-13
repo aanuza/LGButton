@@ -10,7 +10,7 @@ import QuartzCore
 
 
 @IBDesignable
-public class LGButton: UIControl {
+open class LGButton: UIControl {
     
     enum TouchAlphaValues : CGFloat {
         case touched = 0.7
@@ -51,7 +51,7 @@ public class LGButton: UIControl {
     @IBOutlet fileprivate var leadingLoadingConstraint: NSLayoutConstraint!
     
     
-    public var isLoading = false {
+    open var isLoading = false {
         didSet {
            showLoadingView()
         }
@@ -60,27 +60,27 @@ public class LGButton: UIControl {
     // MARK: - Inspectable properties
     // MARK:
     
-    @IBInspectable public var bgColor: UIColor = UIColor.gray {
+    @IBInspectable open var bgColor: UIColor = UIColor.gray {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var showTouchFeedback: Bool = true
+    @IBInspectable open var showTouchFeedback: Bool = true
     
-    @IBInspectable public var gradientStartColor: UIColor? = nil {
+    @IBInspectable open var gradientStartColor: UIColor? = nil {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var gradientEndColor: UIColor? = nil {
+    @IBInspectable open var gradientEndColor: UIColor? = nil {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var gradientHorizontal: Bool = false {
+    @IBInspectable open var gradientHorizontal: Bool = false {
         didSet{
             if gradient != nil {
                 gradient?.removeFromSuperlayer()
@@ -90,7 +90,7 @@ public class LGButton: UIControl {
         }
     }
     
-    @IBInspectable public var gradientRotation: CGFloat = 0 {
+    @IBInspectable open var gradientRotation: CGFloat = 0 {
         didSet{
             if gradient != nil {
                 gradient?.removeFromSuperlayer()
@@ -100,235 +100,235 @@ public class LGButton: UIControl {
         }
     }
     
-    @IBInspectable public var cornerRadius: CGFloat = 0.0 {
+    @IBInspectable open var cornerRadius: CGFloat = 0.0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var fullyRoundedCorners: Bool = false {
+    @IBInspectable open var fullyRoundedCorners: Bool = false {
         didSet{
             setupBorderAndCorners()
         }
     }
     
-    @IBInspectable public var borderColor: UIColor = UIColor.white {
+    @IBInspectable open var borderColor: UIColor = UIColor.white {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var borderWidth: CGFloat = 0.0 {
+    @IBInspectable open var borderWidth: CGFloat = 0.0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var titleColor: UIColor = UIColor.white {
+    @IBInspectable open var titleColor: UIColor = UIColor.white {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var titleString: String = "" {
+    @IBInspectable open var titleString: String = "" {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var titleFontName: String? {
+    @IBInspectable open var titleFontName: String? {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var titleFontSize: CGFloat = 14.0 {
+    @IBInspectable open var titleFontSize: CGFloat = 14.0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var verticalOrientation: Bool = false {
+    @IBInspectable open var verticalOrientation: Bool = false {
         didSet {
             setupView()
         }
     }
     
-    @IBInspectable public var leftIconString: String = "" {
+    @IBInspectable open var leftIconString: String = "" {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var leftIconFontName: String = " " {
+    @IBInspectable open var leftIconFontName: String = " " {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var leftIconFontSize: CGFloat = 14.0 {
+    @IBInspectable open var leftIconFontSize: CGFloat = 14.0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var leftIconColor: UIColor = UIColor.white {
+    @IBInspectable open var leftIconColor: UIColor = UIColor.white {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var leftImageSrc: UIImage? = nil {
+    @IBInspectable open var leftImageSrc: UIImage? = nil {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var leftImageWidth: CGFloat = 20 {
+    @IBInspectable open var leftImageWidth: CGFloat = 20 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var leftImageHeight: CGFloat = 20 {
+    @IBInspectable open var leftImageHeight: CGFloat = 20 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var leftImageColor: UIColor? = nil {
+    @IBInspectable open var leftImageColor: UIColor? = nil {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var rightIconString: String = "" {
+    @IBInspectable open var rightIconString: String = "" {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var rightIconFontName: String = " " {
+    @IBInspectable open var rightIconFontName: String = " " {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var rightIconFontSize: CGFloat = 14.0 {
+    @IBInspectable open var rightIconFontSize: CGFloat = 14.0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var rightIconColor: UIColor = UIColor.white {
+    @IBInspectable open var rightIconColor: UIColor = UIColor.white {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var rightImageSrc: UIImage? = nil {
+    @IBInspectable open var rightImageSrc: UIImage? = nil {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var rightImageWidth: CGFloat = 20 {
+    @IBInspectable open var rightImageWidth: CGFloat = 20 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var rightImageHeight: CGFloat = 20 {
+    @IBInspectable open var rightImageHeight: CGFloat = 20 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var rightImageColor: UIColor? = nil {
+    @IBInspectable open var rightImageColor: UIColor? = nil {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var spacingTitleIcon: CGFloat = 16.0 {
+    @IBInspectable open var spacingTitleIcon: CGFloat = 16.0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var spacingTop: CGFloat = 8.0 {
+    @IBInspectable open var spacingTop: CGFloat = 8.0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var spacingBottom: CGFloat = 8.0 {
+    @IBInspectable open var spacingBottom: CGFloat = 8.0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var spacingLeading: CGFloat = 16.0 {
+    @IBInspectable open var spacingLeading: CGFloat = 16.0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var spacingTrailing: CGFloat = 16.0 {
+    @IBInspectable open var spacingTrailing: CGFloat = 16.0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var shadowOffset: CGSize = CGSize.init(width:0, height:0) {
+    @IBInspectable open var shadowOffset: CGSize = CGSize.init(width:0, height:0) {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var shadowRadius: CGFloat = 0 {
+    @IBInspectable open var shadowRadius: CGFloat = 0 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var shadowOpacity: CGFloat = 1 {
+    @IBInspectable open var shadowOpacity: CGFloat = 1 {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var shadowColor: UIColor = UIColor.black {
+    @IBInspectable open var shadowColor: UIColor = UIColor.black {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var loadingSpinnerColor: UIColor = UIColor.white {
+    @IBInspectable open var loadingSpinnerColor: UIColor = UIColor.white {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var loadingColor: UIColor = UIColor.white {
+    @IBInspectable open var loadingColor: UIColor = UIColor.white {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var loadingString: String = "" {
+    @IBInspectable open var loadingString: String = "" {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var loadingFontName: String? {
+    @IBInspectable open var loadingFontName: String? {
         didSet{
             setupView()
         }
     }
     
-    @IBInspectable public var loadingFontSize: CGFloat = 14.0 {
+    @IBInspectable open var loadingFontSize: CGFloat = 14.0 {
         didSet{
             setupView()
         }
@@ -348,7 +348,7 @@ public class LGButton: UIControl {
         setupView()
     }
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         if gradient != nil {
             gradient?.removeFromSuperlayer()
             gradient = nil
@@ -357,7 +357,7 @@ public class LGButton: UIControl {
         setupBorderAndCorners()
     }
     
-    override public var intrinsicContentSize: CGSize {
+    override open var intrinsicContentSize: CGSize {
         return CGSize(width: 10, height: 10)
     }
     
@@ -614,11 +614,11 @@ public class LGButton: UIControl {
         }
     }
 
-    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         pressed = true
     }
     
-    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?){
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?){
         let shouldSendActions = pressed
         pressed = false
         if shouldSendActions{
@@ -626,7 +626,7 @@ public class LGButton: UIControl {
         }
     }
     
-    override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?){
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?){
         if let touchLoc = touches.first?.location(in: self){
             if (touchLoc.x < -touchDisableRadius ||
                 touchLoc.y < -touchDisableRadius ||
@@ -640,7 +640,7 @@ public class LGButton: UIControl {
         }
     }
     
-    override public func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         pressed = false
     }
     

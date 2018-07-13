@@ -10,7 +10,6 @@
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		AF666D7520F9114400A7D37D /* LGButton.h in Headers */ = {isa = PBXBuildFile; fileRef = AF666D7320F9114400A7D37D /* LGButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF666D7820F9114400A7D37D /* LGButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF666D7120F9114400A7D37D /* LGButton.framework */; };
 		AF666D7920F9114400A7D37D /* LGButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF666D7120F9114400A7D37D /* LGButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF666D9E20F9125A00A7D37D /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF666D8720F9125900A7D37D /* octicons.ttf */; };
@@ -21,7 +20,6 @@
 		AF666DA320F9125A00A7D37D /* open-iconic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF666D8C20F9125900A7D37D /* open-iconic.ttf */; };
 		AF666DA420F9125A00A7D37D /* MaterialIcons-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF666D8D20F9125900A7D37D /* MaterialIcons-Regular.ttf */; };
 		AF666DA520F9125A00A7D37D /* map-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF666D8E20F9125900A7D37D /* map-icons.ttf */; };
-		AF666DA620F9125A00A7D37D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = AF666D9120F9125A00A7D37D /* LICENSE */; };
 		AF666DA720F9125A00A7D37D /* Octicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF666D9220F9125A00A7D37D /* Octicon.swift */; };
 		AF666DA820F9125A00A7D37D /* Iconic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF666D9320F9125A00A7D37D /* Iconic.swift */; };
 		AF666DA920F9125A00A7D37D /* FontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF666D9420F9125A00A7D37D /* FontLoader.swift */; };
@@ -32,8 +30,10 @@
 		AF666DAE20F9125A00A7D37D /* ThemifyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF666D9920F9125A00A7D37D /* ThemifyIcon.swift */; };
 		AF666DAF20F9125A00A7D37D /* FontAwesome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF666D9A20F9125A00A7D37D /* FontAwesome.swift */; };
 		AF666DB020F9125A00A7D37D /* SwiftIconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF666D9B20F9125A00A7D37D /* SwiftIconFont.swift */; };
-		AF666DB120F9125A00A7D37D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = AF666D9C20F9125A00A7D37D /* .gitkeep */; };
 		AF666DB220F9125A00A7D37D /* LGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF666D9D20F9125A00A7D37D /* LGButton.swift */; };
+		AF666DB920F9290B00A7D37D /* LGButton.h in Headers */ = {isa = PBXBuildFile; fileRef = AF666D7320F9114400A7D37D /* LGButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF666DBA20F9292900A7D37D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF666D7420F9114400A7D37D /* Info.plist */; };
+		AF666DBB20F929A900A7D37D /* LGButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = AF666D9D20F9125A00A7D37D /* LGButton.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		C94024EB1EEDE8D00028B9E2 /* LGButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94024E91EEDE8D00028B9E2 /* LGButton.framework */; };
 		C9D7C14B1EEDDFFD00C12D57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D7C14A1EEDDFFD00C12D57 /* Assets.xcassets */; };
 		D800FA6EF381CB6C6F09C558 /* Pods_LGButton_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CED5CB4DE3A2C6C1467DCB3 /* Pods_LGButton_Example.framework */; };
@@ -265,7 +265,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF666D7520F9114400A7D37D /* LGButton.h in Headers */,
+				AF666DB920F9290B00A7D37D /* LGButton.h in Headers */,
+				AF666DBB20F929A900A7D37D /* LGButton.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +329,7 @@
 					};
 					AF666D7020F9114400A7D37D = {
 						CreatedOnToolsVersion = 9.4.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -367,12 +368,11 @@
 			files = (
 				AF666DA520F9125A00A7D37D /* map-icons.ttf in Resources */,
 				AF666D9F20F9125A00A7D37D /* LGButton.xib in Resources */,
+				AF666DBA20F9292900A7D37D /* Info.plist in Resources */,
 				AF666DA320F9125A00A7D37D /* open-iconic.ttf in Resources */,
 				AF666DA220F9125A00A7D37D /* FontAwesome.ttf in Resources */,
 				AF666DA420F9125A00A7D37D /* MaterialIcons-Regular.ttf in Resources */,
 				AF666DA020F9125A00A7D37D /* themify.ttf in Resources */,
-				AF666DA620F9125A00A7D37D /* LICENSE in Resources */,
-				AF666DB120F9125A00A7D37D /* .gitkeep in Resources */,
 				AF666DA120F9125A00A7D37D /* Ionicons.ttf in Resources */,
 				AF666D9E20F9125A00A7D37D /* octicons.ttf in Resources */,
 			);
@@ -624,16 +624,17 @@
 		AF666D7A20F9114400A7D37D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -644,14 +645,17 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = LGButton/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = org.demo.swift.lgbutton;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -660,16 +664,17 @@
 		AF666D7B20F9114400A7D37D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -679,13 +684,15 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = LGButton/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.demo.swift.lgbutton;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
